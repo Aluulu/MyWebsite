@@ -14,7 +14,8 @@ a.navbar-brand {
     border-color: #E7E7E7;
 }
 
-/* Provide sufficient contrast against white background */
+/* Provide sufficient contrast against black background */
+/* Controls Hyperlink colour */
 a {
   color: #0366d6;
 }
@@ -70,7 +71,7 @@ body {
     color: white; /* Colour of text in body */
     /* https://uxdesign.cc/dark-mode-ui-design-the-definitive-guide-part-1-color-53dcfaea5129 */
 
-    text-align: center;
+    text-align: justify;
     margin-bottom: 60px;
 }
 .footer {
@@ -79,4 +80,13 @@ body {
   width: 100%;
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
+}
+
+.InvertSvgColour {
+    filter: invert(1);
+    text-align: center;
+}
+
+.attributeIcons {
+    text-align: center;
 }

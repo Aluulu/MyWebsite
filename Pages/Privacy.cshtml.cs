@@ -19,6 +19,8 @@ namespace MyWebsite.Pages
 
         public void OnGet()
         {
+            string dateTime = DateTime.Now.ToShortDateString();
+            ViewData["TimeStamp"] = dateTime;
         }
     }
 }

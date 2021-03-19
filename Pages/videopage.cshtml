@@ -1,0 +1,58 @@
+﻿@page
+@model MyWebsite.Pages.videopageModel
+@{
+}
+
+@{
+    Layout = null; <!-- Do not use the universal reference page. This removes padding and the nav bar -->
+    <link href="/css/site.css" rel="stylesheet" type="text/css" />
+    <!-- Link to the CSS since the layout page is no longer being referenced -->
+
+}
+<!-- Created using https://css-tricks.com/full-page-background-video-styles/ -->
+<video playsinline autoplay muted loop poster="Thumbnail.jpg" id="bgvid">
+    <source src="thumbnail.webm" type="video/webm">
+    <source src="~/images/20210318_181306.mp4" type="video/mp4">
+</video>
+
+<!-- Text in the middle of the page -->
+<header class="viewport-header">
+    <h1>
+        <a class="nav-link text-light" asp-area="" asp-page="/videopage">
+            Hey! It's me!
+        </a> 
+    </h1>
+</header>
+
+
+<!-- CSS for video -->
+<style>
+    video {
+        object-fit: cover;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    /* CSS for text on the video */
+    .viewport-header {
+        position: relative;
+        height: 100vh;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    a {
+        color: #ffffff;
+    }
+
+    html {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-size: 150%;
+        line-height: 1.4;
+    }
+</style>

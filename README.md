@@ -1,6 +1,6 @@
 # MyWebsite
 
-This respository contains the files required to run the website located at callumwellard.azurewebsites.net/
+This respository contains the files required to run the website located at https://callumwellard.azurewebsites.net/
 
 This website was created using the ASP.NET Core Web Application template in Visual Studio 2019. It was adjusted to fit my needs.
 

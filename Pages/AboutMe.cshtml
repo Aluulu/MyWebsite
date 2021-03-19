@@ -1,39 +1,48 @@
 ﻿@page
 @model MyWebsite.Pages.AboutMeModel
 @{
+    ViewData["Title"] = "About Me";
 }
 
-<h1 class="display-4">Welcome!</h1>
+<h1 class="display-3">Welcome!</h1>
 
 
-<p>Massa id neque aliquam vestibulum. Egestas diam in arcu cursus euismod quis. Sodales ut eu sem integer vitae justo eget magna. Amet luctus venenatis lectus magna fringilla urna. Faucibus ornare suspendisse sed nisi lacus sed viverra. Gravida neque convallis a cras semper auctor neque. In nulla posuere sollicitudin aliquam ultrices sagittis orci. Aliquam sem fringilla ut morbi tincidunt augue. Vitae et leo duis ut diam quam nulla porttitor. Quis viverra nibh cras pulvinar mattis nunc. Platea dictumst quisque sagittis purus sit. Ut consequat semper viverra nam libero justo laoreet sit amet. Urna id volutpat lacus laoreet non curabitur gravida arcu..</p>
-<p>Mi quis hendrerit dolor magna eget est lorem ipsum dolor. Arcu non odio euismod lacinia at quis. Dignissim enim sit amet venenatis urna cursus eget. A lacus vestibulum sed arcu non odio euismod lacinia. Risus ultricies tristique nulla aliquet enim. Diam vulputate ut pharetra sit amet aliquam id. Auctor eu augue ut lectus arcu bibendum at varius. Libero volutpat sed cras ornare arcu dui vivamus. Elit sed vulputate mi sit amet mauris commodo quis. Pharetra massa massa ultricies mi quis hendrerit dolor magna. Tincidunt arcu non sodales neque sodales ut etiam sit amet. Purus sit amet luctus venenatis lectus. Duis at tellus at urna condimentum. Quam adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus urna. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit. Orci eu lobortis elementum nibh tellus molestie nunc non blandit.</p>
+<p>This is a website to all things me. Yes I know that sounds egotistical but that's not the intention.</p>
+<p>I just wanted a website where I can store things I like, as well as  being able to say "yes I built a website and yes you can visit it right now"</p>
 
-<p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<!-- Maybe insert the BigSmug emote here hehehehe -->
+<!-- Or maybe a picture of myself since that would fit the theme -->
 
+<h3>Who am I?</h3>
+<p>My name is Callum Wellard. I was born on the 9th of september, 1998. That would make me @ViewData["CallumDOB"].</p>
 
-<a class="nav-link text-light" asp-area="" asp-page="/videopage">About Me</a>
+<p>I'm going to include a bunch of stuff here such as my CV as well as any pictures of myself. I'm not expecting to keep this website up to date but if I do then that 
+    would be pretty damn cool I can't deny.
+</p>
 
+<a class="nav-link text-light" asp-area=""asp-page="/Pictures">Want to see pictures of cute me? Here ya go!</a>
+
+<h3>Socials</h3>
+<p>If you ever want to contact me then my socials are as followed:</p>
 
 <div class="InvertSvgColour">
     <p>
 
         <a href="https://www.youtube.com/channel/UCR6F4uDpl-NWs5-GULFKxFg">
-            <img src="~/images/youtube.png" alt="YouTube icon" style="width:64px; height:64px;">
+            <img src="~/images/icons/youtube.png" alt="YouTube icon" style="width:64px; height:64px;">
         </a>
         <a href="https://steamcommunity.com/profiles/76561198184642273/">
-            <img src="~/images/steam.png" alt="Steam icon" style="width:64px; height:64px;">
+            <img src="~/images/icons/steam.png" alt="Steam icon" style="width:64px; height:64px;">
         </a>
         <a href="https://twitter.com/Alulcard">
-            <img src="~/images/twitter.png" alt="Twitter icon" style="width:64px; height:64px;">
+            <img src="~/images/icons/twitter.png" alt="Twitter icon" style="width:64px; height:64px;">
         </a>
         <a href="https://www.reddit.com/user/Alulcard/">
-            <img src="~/images/reddit.png" alt="Reddit icon" style="width:64px; height:64px;">
+            <img src="~/images/icons/reddit.png" alt="Reddit icon" style="width:64px; height:64px;">
         </a>
         <a href="https://github.com/Aluulu">
-            <img src="~/images/github.png" alt="Github icon" style="width:64px; height:64px;">
+            <img src="~/images/icons/github.png" alt="Github icon" style="width:64px; height:64px;">
         </a>
     </p>
 </div>
 <!-- https://www.flaticon.com/packs/social-media-51 -->
-<div 

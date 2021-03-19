@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace MyWebsite.Pages
 {
-    public class videopageModel : PageModel
+    public class PicturesModel : PageModel
     {
         public void OnGet()
         {

@@ -19,7 +19,7 @@ namespace MyWebsite.Pages
 
         public void OnGet()
         {
-            string dateTime = DateTime.Now.ToShortDateString();
+            string dateTime = DateTime.Now.ToString("dd/MM/yyyy");
             ViewData["TimeStamp"] = dateTime;
         }
     }

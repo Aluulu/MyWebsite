@@ -10,7 +10,7 @@
 }
 
 <!-- Created using https://css-tricks.com/full-page-background-video-styles/ -->
-<video playsinline autoplay muted loop poster="Thumbnail.jpg" id="bgvid">
+<video playsinline autoplay muted loop poster="~/images/thumbnail.png" id="bgvid">
     <source src="~/images/WelcomeVideo.webm" type="video/webm">
 </video>
 
@@ -18,7 +18,6 @@
 <header class="viewport-header">
     <h1><a class="nav-link text-light" asp-area="" asp-page="/AboutMe">Hey! It's me!</a></h1>
 </header>
-
 <!-- CSS for video -->
 <style>
     video {
@@ -40,6 +39,7 @@
         justify-content: center;
     }
 
+    /* Colour of the text in the middle */
     a {
         color: #ffffff;
     }
@@ -49,5 +49,16 @@
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
         font-size: 150%;
         line-height: 1.4;
+    }
+
+    /* Makes the video not play on small screens (mobile devices) */
+    /* Shamelessly stolen from https://redstapler.co/responsive-css-video-background/ */
+    @@media screen and (max-width: 767px) {
+        #bgvid {
+            display: none;
+        }
+        body { background: url('~/images/me2.jpg');
+               background-size: cover;
+        }
     }
 </style>

@@ -47,11 +47,20 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="border-top footer text-muted"> <!-- Text in the footer -->
         <div class="container">
-            &copy; 2021 - MyWebsite - <a asp-area="" asp-page="/Privacy">Privacy</a> Last updated 2021/03/22 
+            <div class="footerText">
+                &copy; 2021 - MyWebsite - <a asp-area="" asp-page="/Privacy">Privacy</a> Last updated 2021/03/22
+            </div>
         </div>
     </footer>
+
+    
+    <style> /* Changes the footer text to be white */
+        .footerText {
+            color: #fff;
+        }
+    </style>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

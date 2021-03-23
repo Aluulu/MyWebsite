@@ -3,75 +3,156 @@
 @{
     ViewData["Title"] = "Pictures";
 }
-
 <style>
     .footer {
-        position: relative; /* Makes the footer stay at the bottom of the page when the scroll bar appears */
+        position: relative;
     }
-
-    /* Code for collapsible content */
-    .collapsible {
-        background-color: #777;
-        color: white;
-        cursor: pointer;
-        padding: 18px;
-        width: 100%;
-        border: none;
-        text-align: left;
-        outline: none;
-        font-size: 15px;
-    }
-
-        .active, .collapsible:hover {
-            background-color: #555;
-        }
-
-    .content {
-        padding: 0 18px;
-        display: none;
-        overflow: hidden;
-        background-color: #616161;
-        text-align: center;
-    }
+    /* Makes the footer stay at the bottom of the page when the scroll bar appears */
 </style>
 
-<p>A Collapsible:</p>
-<button type="button" class="collapsible">March 2021</button>
-<div class="content">
-    <img src="~/images/PicturesOfMyself/Resized/2021_March_1.jpg" alt="me icon" style="width:306px; height:643px" ; />
-    <img src="~/images/PicturesOfMyself/Resized/2021_March_2.jpg" alt="me icon" style="width:306px; height:643px" ; />
-    <img src="~/images/PicturesOfMyself/Resized/2021_March_3.jpg" alt="me icon" style="width:306px; height:643px" ; />
-    <img src="~/images/PicturesOfMyself/Resized/2021_March_4.jpg" alt="me icon" style="width:306px; height:643px" ; />
-    <img src="~/images/PicturesOfMyself/Resized/2021_March_5.jpg" alt="me icon" style="width:306px; height:643px" ; />
-    <img src="~/images/PicturesOfMyself/Resized/2021_March_6.jpg" alt="me icon" style="width:306px; height:643px" ; />
+<h1>Pictures of me!</h1>
+<p>Here are a few pictures of myself, they are sorted by Year, and then sorted by Month.</p>
+<p>Unfortunately the images have been scaled to 306px by 643px as they scale a lot better for webpages.</p>
+<p>The original images are around 1528px by 3216px. If I can find a way to get them to display on the webpage then I'll happily include them.</p>
+
+<h2>2021:</h2>
+<div> <!-- Legit only have this so I can collapse it in the IDE, this wont make it into the final version (I hope) -->
+    <button class="accordion">March 2021</button>
+    <div class="panel">
+        <img src="~/images/PicturesOfMyself/Resized/2021_March_1.jpg" alt="me icon" style="width:306px; height:643px" ; />
+        <img src="~/images/PicturesOfMyself/Resized/2021_March_2.jpg" alt="me icon" style="width:306px; height:643px" ; />
+        <img src="~/images/PicturesOfMyself/Resized/2021_March_3.jpg" alt="me icon" style="width:306px; height:643px" ; />
+        <img src="~/images/PicturesOfMyself/Resized/2021_March_4.jpg" alt="me icon" style="width:306px; height:643px" ; />
+        <img src="~/images/PicturesOfMyself/Resized/2021_March_5.jpg" alt="me icon" style="width:306px; height:643px" ; />
+        <img src="~/images/PicturesOfMyself/Resized/2021_March_6.jpg" alt="me icon" style="width:306px; height:643px" ; />
+    </div>
+    <button class="accordion">February 2021</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <button class="accordion">January 2021</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
 </div>
 
-<p>Collapsible Set:</p>
-<button type="button" class="collapsible">Open Section 1</button>
-<div class="content">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<h3>2020:</h3>
+<div> <!-- Legit only have this so I can collapse it in the IDE, this wont make it into the final version (I hope) -->
+    <button class="accordion">December 2020</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <button class="accordion">November 2020</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <button class="accordion">October 2020</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <button class="accordion">September 2020</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <button class="accordion">August 2020</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <button class="accordion">July 2020</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <button class="accordion">June 2020</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <button class="accordion">May 2020</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <button class="accordion">April 2020</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <button class="accordion">March 2020</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <button class="accordion">February 2020</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <button class="accordion">January 2020</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
 </div>
-<button type="button" class="collapsible">Open Section 2</button>
-<div class="content">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div>
-<button type="button" class="collapsible">Open Section 3</button>
-<div class="content">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+<h3>2019:</h3>
+<div> <!-- Legit only have this so I can collapse it in the IDE, this wont make it into the final version (I hope) -->
+    <button class="accordion">December 2019</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <button class="accordion">November 2019</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <button class="accordion">October 2019</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <button class="accordion">September 2019</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <button class="accordion">August 2019</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <button class="accordion">July 2019</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <button class="accordion">June 2019</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <button class="accordion">May 2019</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <button class="accordion">April 2019</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <button class="accordion">March 2019</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <button class="accordion">February 2019</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <button class="accordion">January 2019</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
 </div>
 
 <script>
-    var coll = document.getElementsByClassName("collapsible");
+    // Needs to be left at the bottom of the page in order for them to function properly.
+    var acc = document.getElementsByClassName("accordion");
     var i;
 
-    for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function () {
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
             this.classList.toggle("active");
-            var content = this.nextElementSibling;
-            if (content.style.display === "block") {
-                content.style.display = "none";
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
             } else {
-                content.style.display = "block";
+                panel.style.maxHeight = panel.scrollHeight + "px";
             }
         });
     }

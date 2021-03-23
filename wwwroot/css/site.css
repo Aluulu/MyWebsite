@@ -84,16 +84,41 @@ body {
     line-height: 3.75em; /* Vertically center the text there */ /* Was 60px */
 }
 
+/* Used to invert the social media icons from black to white. */
 .InvertSvgColour {
     filter: invert(1);
-    text-align: center;
-}
-
-.attributeIcons {
     text-align: center;
 }
 
 body, html {
     height: 100%;
     margin: 0;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    .active, .accordion:hover {
+        background-color: #555;
+    }
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+    padding: 0 18px;
+    background-color: #616161;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    text-align: center;
 }

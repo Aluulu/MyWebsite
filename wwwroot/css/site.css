@@ -19,7 +19,12 @@ a.navbar-brand {
 /* Provide sufficient contrast against black background */
 /* Controls Hyperlink colour */
 a {
-  color: #0366d6;
+    color: #A3CEDC;
+}
+
+/* mouse over link  */
+a:hover {
+    color: #537E8C;
 }
 
 .btn-primary {
@@ -90,6 +95,7 @@ body {
     text-align: center;
 }
 
+/* Edits the main body */
 body, html {
     height: 100%;
     margin: 0;
@@ -121,4 +127,19 @@ body, html {
     overflow: hidden;
     transition: max-height 0.2s ease-out;
     text-align: center;
+}
+
+/* Apply these styles to the text, excludes the header and footer */
+.textStyleCSS {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 120%;
+    line-height: 1.4;
+}
+
+.noteCSS {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 80%;
+    line-height: 1.4;
+    font-style: italic;
+    background-color: #616161;
 }

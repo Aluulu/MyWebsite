@@ -35,7 +35,6 @@
                         <li class="nav-item">
                             <a class="nav-link text-light" asp-area="" asp-page="/Pictures">Pictures</a>
                         </li>
-
                     </ul>
                 </div>
             </div>
@@ -43,7 +42,9 @@
     </header>
     <div class="container">
         <main role="main" class="pb-3">
-            @RenderBody()
+            <div class="textStyleCSS"> <!-- Applys the css styles for all text in the body -->
+                    @RenderBody() <!-- THIS IS WHERE THE OTHER PAGES GET RENDERED -->
+            </div>
         </main>
     </div>
 
@@ -55,7 +56,6 @@
         </div>
     </footer>
 
-    
     <style> /* Changes the footer text to be white */
         .footerText {
             color: #fff;

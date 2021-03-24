@@ -35,6 +35,10 @@
                         <li class="nav-item">
                             <a class="nav-link text-light" asp-area="" asp-page="/Pictures">Pictures</a>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-page="/Documents">Documents</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -43,7 +47,7 @@
     <div class="container">
         <main role="main" class="pb-3">
             <div class="textStyleCSS"> <!-- Applys the css styles for all text in the body -->
-                    @RenderBody() <!-- THIS IS WHERE THE OTHER PAGES GET RENDERED -->
+                @RenderBody() <!-- THIS IS WHERE THE OTHER PAGES GET RENDERED -->
             </div>
         </main>
     </div>
@@ -51,16 +55,12 @@
     <footer class="border-top footer text-muted"> <!-- Text in the footer -->
         <div class="container">
             <div class="footerText">
-                &copy; 2021 - MyWebsite - <a asp-area="" asp-page="/Privacy">Privacy</a> Last updated 2021/03/22
+                &copy; 2021 - MyWebsite - <a asp-area="" asp-page="/Privacy">Privacy</a> Last updated 2021/03/24
             </div>
         </div>
     </footer>
 
-    <style> /* Changes the footer text to be white */
-        .footerText {
-            color: #fff;
-        }
-    </style>
+    <style>.footerText {color: #fff;}</style> <!-- Changes the footer text to be white -->
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

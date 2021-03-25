@@ -14,7 +14,6 @@ namespace MyWebsite.Pages
 
         public void OnGet()
         {
-
         }
     }
 }

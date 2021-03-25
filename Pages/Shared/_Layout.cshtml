@@ -46,13 +46,15 @@
     </header>
     <div class="container">
         <main role="main" class="pb-3">
-            <div class="textStyleCSS"> <!-- Applys the css styles for all text in the body -->
+            <div class="textStyleCSS">
+                <!-- Applys the css styles for all text in the body -->
                 @RenderBody() <!-- THIS IS WHERE THE OTHER PAGES GET RENDERED -->
             </div>
         </main>
     </div>
 
-    <footer class="border-top footer text-muted"> <!-- Text in the footer -->
+    <footer class="border-top footer text-muted">
+        <!-- Text in the footer -->
         <div class="container">
             <div class="footerText">
                 &copy; 2021 - MyWebsite - <a asp-area="" asp-page="/Privacy">Privacy</a> Last updated 2021/03/24
@@ -60,7 +62,11 @@
         </div>
     </footer>
 
-    <style>.footerText {color: #fff;}</style> <!-- Changes the footer text to be white -->
+    <style>
+        .footerText {
+            color: #fff;
+        }
+    </style> <!-- Changes the footer text to be white -->
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

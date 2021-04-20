@@ -1,16 +1,21 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
-a.navbar-brand {
-    white-space: normal;
-    text-align: center;
-    word-break: break-all;
-}
-
 /* navbar */
 .navbar-default {
     background-color: #424242;
     border-color: #E7E7E7;
+
+}
+
+.nav-item {
+    margin-bottom: 0px;
+    font-family: Inter, sans-serif;
+    color: #fff;
+    font-size: 1em;
+    line-height: 1.5em;
+    font-weight: 700;
+    letter-spacing: 0.013em;
 }
 
 /* Provide sufficient contrast against black background */
@@ -73,7 +78,7 @@ html {
 }
 
 body {
-    background-color: #424242; /*  Colour of background in body */
+    background-color: #1c1e27; /*  Colour of background in body */
     color: white; /* Colour of text in body */
     /* https://uxdesign.cc/dark-mode-ui-design-the-definitive-guide-part-1-color-53dcfaea5129 */
 
@@ -142,4 +147,19 @@ body, html {
     line-height: 1.4;
     font-style: italic;
     background-color: #616161;
+}
+
+/* Graident for headers */
+/* Shamelessly stolen from https://webplatform.news/issues/2018-11-02 */
+.Gradient {
+    text-align: center;
+    color: orangered; /* fallback */
+}
+
+@supports (background-clip: text) {
+    .Gradient {
+        background-image: linear-gradient(45deg, fuchsia, orangered);
+        color: transparent;
+        background-clip: text;
+    }
 }

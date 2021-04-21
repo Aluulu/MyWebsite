@@ -152,7 +152,6 @@ body, html {
 /* Graident for headers */
 /* Shamelessly stolen from https://webplatform.news/issues/2018-11-02 */
 .Gradient {
-    text-align: center;
     color: orangered; /* fallback */
 }
 
@@ -163,3 +162,35 @@ body, html {
         background-clip: text;
     }
 }
+
+#License {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 80%;
+    line-height: 1.4;
+    font-style: italic;
+}
+
+.callout-content {
+    margin-bottom: 0px;
+    padding: 16px;
+    -ms-grid-columns: 1fr 220px;
+    grid-template-columns: 1fr 220px;
+    -ms-grid-rows: auto;
+    grid-template-rows: auto;
+    border-radius: 8px;
+    background-color: #1d1e22;
+}
+
+.colour-gradient {
+    width: 90%;
+    max-width: 1280px;
+    margin-right: auto;
+    margin-bottom: 48px;
+    margin-left: auto;
+    padding: 32px;
+    border-radius: 12px;
+    background-image: url("https://assets.website-files.com/600ead1452cf056d0e52dbed/603408f80d379f66929884cf_PurpleBackground%20(1).png");
+    background-position: 0px 0px;
+    background-size: cover;
+}
+

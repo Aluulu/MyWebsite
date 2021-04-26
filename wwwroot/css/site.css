@@ -94,6 +94,11 @@ body {
     line-height: 3.75em; /* Vertically center the text there */ /* Was 60px */
 }
 
+{
+    /* .push must be the same height as footer */
+    height: 50px;
+}
+
 /* Used to invert the social media icons from black to white. */
 .InvertSvgColour {
     filter: invert(1);
@@ -194,3 +199,18 @@ body, html {
     background-size: cover;
 }
 
+div.responsiveText {
+
+}
+
+@media screen and (min-width: 601px) {
+    div.responsiveText {
+        font-size: 6em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    div.responsiveText {
+        font-size: 1.5em;
+    }
+}

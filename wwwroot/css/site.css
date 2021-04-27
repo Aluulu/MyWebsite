@@ -159,11 +159,22 @@ body, html {
     color: orangered; /* fallback */
 }
 
-@supports (background-clip: text) {
+@supports (background-clip: text) { /* Firefox Support */
     .Gradient {
-        background-image: linear-gradient(45deg, fuchsia, orangered);
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ff00ff+0,ff4500+100 */
+        background: rgb(255,0,255); /* Old browsers */
+        background: -moz-linear-gradient(-45deg, rgba(255,0,255,1) 0%, rgba(255,69,0,1) 100%); /* FF3.6-15 */
         color: transparent;
         background-clip: text;
+    }
+}
+
+@supports (-webkit-background-clip: text) { /* Chromium Support */
+    .Gradient {
+        background: -webkit-linear-gradient(-45deg, rgba(255,0,255,1) 0%,rgba(255,69,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(135deg, rgba(255,0,255,1) 0%,rgba(255,69,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        color: transparent;
+        -webkit-background-clip: text;
     }
 }
 

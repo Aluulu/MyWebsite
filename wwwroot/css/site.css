@@ -102,7 +102,6 @@ body {
 /* Used to invert the social media icons from black to white. */
 .InvertSvgColour {
     filter: invert(1);
-    text-align: center;
 }
 
 /* Edits the main body */

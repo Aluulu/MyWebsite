@@ -16,14 +16,14 @@ for details on configuring this project to bundle and minify static web assets. 
     letter-spacing: 0.013em;
 }
 
-.h1 {
+.heading1 {
     color: #303030;
     font-weight:500;
     font-size: 2.5rem;
     line-height: 1.2;
 }
 
-.h2 {
+.heading2 {
     color: #212529;
     font-size: 2rem;
     font-weight: 500;
@@ -163,6 +163,7 @@ body, html {
 
 .footerText {
     color: black;
+    text-align: center;
 }
 
 .noteCSS {
@@ -196,6 +197,13 @@ body, html {
         color: transparent;
         -webkit-background-clip: text;
     }
+}
+
+.License {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 80%;
+    line-height: 1.4;
+    font-style: italic;
 }
 
 #License {
@@ -331,3 +339,16 @@ div.responsiveText {
     .demo:hover {
         opacity: 1;
     }
+
+.commits {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.flexBox {
+    display: flex; /* or inline-flex */
+}
+
+.iconsSpace {
+    margin-right: 8px;
+}

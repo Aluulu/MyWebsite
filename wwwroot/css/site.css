@@ -24,8 +24,7 @@ for details on configuring this project to bundle and minify static web assets. 
 }
 
 .heading2 {
-    color: #212529;
-    font-size: 2rem;
+    margin-bottom: .5rem;
     font-weight: 500;
     line-height: 1.2;
 }
@@ -106,11 +105,6 @@ body {
     line-height: 3.75em; /* Vertically center the text there */ /* Was 60px */
 }
 
-{
-    /* .push must be the same height as footer */
-    height: 50px;
-}
-
 /* Used to invert the social media icons from black to white. */
 .InvertSvgColour {
     filter: invert(1);
@@ -143,7 +137,7 @@ body, html {
 /* Style the accordion panel. Note: hidden by default */
 .panel {
     padding: 0 18px;
-    background-color: #616161;
+    background-color: white;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;

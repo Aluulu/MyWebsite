@@ -23,9 +23,10 @@
 </div>
 <h4>Adjusted from Dark Mode to Light Mode.</h4>
 <p>
-    -Change background to white.<br />
-    -Changed header to purple.<br />
-    -Changed text to be black.<br />
+    -Change <code>.body {background-color}</code> to white.<br />
+    -Changed <code>.bd-navbar {background-color}</code> to purple.<br />
+    -Changed <code>.body {color}</code> to be black.<br />
+    -Removed <code>.Gradient</code> from headings.<br />
 </p>
 <br />
 
@@ -50,8 +51,8 @@
 
 <div class="flexBox">
     <img class="iconsSpace" src="~/images/icons/github.png" alt="GitHub commit link" style="width:24px; height:24px;">
-    <a href="https://github.com/Aluulu/MyWebsite/commit/bc2414c31aa2d38c21b77155f616619de529e2d5">
-        <h2 class="commits">Commit bc2414c31aa2d38c21b77155f616619de529e2d5</h2>
+    <a href="https://github.com/Aluulu/MyWebsite/commit/a318d1be8b2b59e0220ac2df98f2ebfd823c1117">
+        <h2 class="commits">Commit a318d1be8b2b59e0220ac2df98f2ebfd823c1117</h2>
     </a>
 </div>
 <div class="flexBox">
@@ -60,7 +61,7 @@
 </div>
 <h4>Displaying correct title in Documents.cshtml</h4>
 <p>
-    -Fixed the title tag displaying an incorrect title.<br />
+    -Fixed <code>ViewData["Title"]</code> displaying the incorrect title.<br />
 </p>
 <br />
 
@@ -92,13 +93,13 @@
 </div>
 <h4>Updated Documents.cshtml</h4>
 <p>
-    -Added a downloaded link by clicking images.<br />
-    -Changed Header 1 to be relevant to document's page.<br />
-    -Added a gradient border around text and images.<br />
+    -Added <code>a href="/documents/CV.pdf</code> download> to download documents by clicking images.<br />
+    -Changed <code>h1</code> to be relevant to document's page.<br />
+    -Added a gradient border <code>(.Gradient)</code> around text and images.<br />
     -Added .SVG to images folder.<br />
     -Removed old Word image.<br />
     -Added two variants of a document (.docx and .pdf).<br />
-    -Removed "text-align: center;" from site.css<br />
+    -Removed <code>text-align: center;</code> from site.css<br />
 </p>
 <br />
 
@@ -115,8 +116,8 @@
 <h4>AboutMe.cshtml improvements</h4>
 <p>
     -Added a section on my personal achievements.<br />
-    -Added a gradient box around my socials.<br />
-    -Changed Heading1 to fit better in the webpage.<br />
+    -Added a gradient box <code>(.Gradient)</code> around my socials.<br />
+    -Changed <code>h1</code> to fit better in the webpage.<br />
     -General optimizations and cleanup on AboutMe.<br />
     -Added support for responsive text sizes.<br />
     -Made the footer relative on webpages AboutMe, Documents, and Privacy.<br />

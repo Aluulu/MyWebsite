@@ -195,9 +195,11 @@ body, html {
 
 .License {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 80%;
+    font-size: 100% !important;
     line-height: 1.4;
     font-style: italic;
+    margin-top: 0;
+    margin-bottom: 1rem;
 }
 
 #License {

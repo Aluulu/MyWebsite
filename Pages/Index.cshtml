@@ -1,71 +1,67 @@
 ﻿@page
-@model IndexModel
-@{
-    ViewData["Title"] = "Home page";
-}
-@{
-    Layout = null; <!-- Do not use the universal reference page. This removes padding and the nav bar -->
-    <link href="/css/site.css" rel="stylesheet" type="text/css" />
-    <!-- Link to the CSS since the layout page is no longer being referenced -->
-}
+@model MyWebsite.Pages.AboutMeModel
+@{ ViewData["Title"] = "About Me"; }
 
-<!-- Created using https://css-tricks.com/full-page-background-video-styles/ -->
-<video playsinline autoplay muted loop poster="~/images/thumbnail.png" id="bgvid">
-    <source src="~/images/WelcomeVideo.webm" type="video/webm">
-</video>
-
-<!-- Text in the middle of the page -->
-<header class="viewport-header">
-    <h1><a class="nav-link text-light" asp-area="" asp-page="/AboutMe">Hey! It's me!</a></h1>
-</header>
-<!-- CSS for video -->
 <style>
-    video {
-        object-fit: cover;
-        width: 100vw;
-        height: 100vh;
-        position: fixed;
-        top: 0;
-        left: 0;
-    }
-
-    /* CSS for text on the video */
-    .viewport-header {
+    .footer {
         position: relative;
-        height: 100vh;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
+</style> <!-- Makes the footer stay at the bottom of the page when the scroll bar appears -->
 
-    /* Colour of the text in the middle */
-    /* Kept white to look good */
-    a {
-        color: #ffffff;
-    }
+<h1 class="heading1">Welcome!</h1>
+<p>I just wanted a website where I can store things I like, as well as  being able to say "yes I built a website and yes you can visit it right now"</p>
 
-    /* mouse over link  */
-    /* Kept white to look good */
-    a:hover {
-        color: #ffffff;
-    }
+<!-- Maybe insert the BigSmug emote here hehehehe -->
+<!-- Or maybe a picture of myself since that would fit the theme -->
 
-    /* CSS for the text on the video */
-    html {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        font-size: 150%;
-        line-height: 1.4;
-    }
+<div class="container col-xxl-8 px-4">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+            <img src="~/images/index/GitHub Website Heroes.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy" allign="centre";>
+        </div>
+        <div class="col-lg-6">
+            <h1 class="display-5 fw-bold lh-1 mb-3">My Website</h1>
+            <p>One of the best examples of what I've accomplished is my website. It's built using the ASP.NET Core Web Application template in Visual Studio 2019, and then adapted and transformed into what it is today.</p>
+            <p>This entire website is built completely self-taught, everything you see here I had to learn by myself.</p>
+        </div>
+    </div>
+</div>
 
-    /* Makes the video not play on small screens (mobile devices) */
-    /* Shamelessly stolen from https://redstapler.co/responsive-css-video-background/ */
-    @@media screen and (max-width: 767px) {
-        #bgvid {
-            display: none;
-        }
-        body { background: url('~/images/me2.jpg');
-               background-size: cover;
-        }
-    }
-</style>
+<div class="container col-xxl-8 px-4">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-lg-6">
+            <h1 class="display-5 fw-bold lh-1 mb-3">Batch and PowerShell</h1>
+            <p>One of the many different projects I took up was trying to make my life easier through Automation</p>
+            <p>These scripts I wrote help complete tasks automatically and without much problem.</p>
+        </div>
+        <div class="col-10 col-sm-8 col-lg-6">
+            <img src="~/images/index/WinGet Heroes.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy" allign="centre" ;>
+        </div>
+    </div>
+</div>
+
+<h2 class="heading2">Socials</h2>
+<p>If you ever want to contact me then my socials are as followed:</p>
+
+<div class="colour-gradient">
+    <div class="callout-content">
+        <div style="text-align:center">
+            <a href="https://www.youtube.com/channel/UCR6F4uDpl-NWs5-GULFKxFg">
+                <img src="~/images/icons/youtube.png" alt="YouTube icon" style="width:64px; height:64px;">
+            </a>
+            <a href="https://steamcommunity.com/profiles/76561198184642273/">
+                <img src="~/images/icons/steam.png" alt="Steam icon" style="width:64px; height:64px;">
+            </a>
+            <a href="https://twitter.com/Alulcard">
+                <img src="~/images/icons/twitter.png" alt="Twitter icon" style="width:64px; height:64px;">
+            </a>
+            <a href="https://www.reddit.com/user/Alulcard/">
+                <img src="~/images/icons/reddit.png" alt="Reddit icon" style="width:64px; height:64px;">
+            </a>
+            <a href="https://github.com/Aluulu">
+                <img src="~/images/icons/github.png" alt="Github icon" style="width:64px; height:64px;">
+            </a>
+        </div>
+    </div>
+</div>
+<!-- https://www.flaticon.com/packs/social-media-51 -->

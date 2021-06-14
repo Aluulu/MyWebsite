@@ -1,7 +1,7 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
-/* navbar */
+    /* navbar (START) */
 .bd-navbar {
     background-color: #563d7c;
 }
@@ -15,99 +15,53 @@ for details on configuring this project to bundle and minify static web assets. 
     font-weight: 700;
     letter-spacing: 0.013em;
 }
+    /* navbar (END) */
 
+/* heading1 css styles */
 .heading1 {
-    color: #303030;
-    font-weight:500;
-    font-size: 2.5rem;
+    color: #303030; /* Black */
+    font-weight: 500;
+    font-size: 2.5rem; /* 40px */
     line-height: 1.2;
 }
 
+/* heading2 css styles */
 .heading2 {
-    margin-bottom: .5rem;
+    margin-bottom: .5rem; /* 8px */
     font-weight: 500;
     line-height: 1.2;
 }
 
-/* Provide sufficient contrast against black background */
 /* Controls Hyperlink colour (Default blue) */
 a {
 
 }
 
-    /* mouse over link  */
+    /* Mouse over link  */
     a:hover {
-        color: #7952b3;
+        color: #7952b3; /* Dark purple */
     }
-
-.btn-primary {
-    color: black;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
-}
-
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-    color: #7952b3;
-    background-color: #7952b3;
-    border-color: #7952b3;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-    font-size: 0.875em; /* Was 14px */
-}
-
-@media (min-width: 768px) {
-    html {
-        font-size: 1em; /* Was 16px */
-    }
-}
-
-.border-top {
-    border-top: 0.0625em solid #e5e5e5; /* Was 1px */
-}
-
-.border-bottom {
-    border-bottom: 0.0625em solid #e5e5e5; /* Was 1px */
-}
-
-.box-shadow {
-    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-}
-
-button.accept-policy {
-    font-size: 1rem;
-    line-height: inherit;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-    position: relative;
-    min-height: 100%;
-}
 
 body {
-    background-color: #fff; /*  Colour of background in body */
+    background-color: white; /*  Colour of background in body */
     color: black; /* Colour of text in body */
     /* https://uxdesign.cc/dark-mode-ui-design-the-definitive-guide-part-1-color-53dcfaea5129 */
 
     text-align: justify;
-    margin-bottom: 3.75em; /* Was 60px */
+    margin-bottom: 3.75em; /* 60px */
 }
 
 .footer {
-    position: absolute;
+    position: absolute; /* Keeps the footer at the bottom of the page */
     bottom: 0;
     width: 100%;
     white-space: nowrap;
-    line-height: 3.75em; /* Vertically center the text there */ /* Was 60px */
+    line-height: 3.75em; /* Vertically center the text there */ /* 60px */
 }
 
 /* Used to invert the social media icons from black to white. */
 .InvertSvgColour {
-    filter: invert(1);
+    filter: invert(1); /* 100% invert, meaning the colours are fully inverted */
 }
 
 /* Edits the main body */
@@ -116,12 +70,13 @@ body, html {
     margin: 0;
 }
 
+    /* Accordion (START) */
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
-    background-color: #777;
-    color: white;
+    background-color: #777; /* Grey */
+    color: white; /* Colour of text on top of accordion (not dropdown text) */
     cursor: pointer;
-    padding: 18px;
+    padding: 1.125rem; /* 18px */
     width: 100%;
     text-align: left;
     border: none;
@@ -129,77 +84,47 @@ body, html {
     transition: 0.4s;
 }
 
-    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    /* Add a colour to the button when clicked on, and when you hover the mouse over the button */
     .active, .accordion:hover {
         background-color: #555;
     }
 
 /* Style the accordion panel. Note: hidden by default */
 .panel {
-    padding: 0 18px;
+    padding: 0 1.125rem; /* 18px */
     background-color: white;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
     text-align: center;
 }
+    /* Accordion (END) */
 
 /* Apply these styles to the text, excludes the header and footer */
 .textStyleCSS {
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    font-size: 1rem;
+    font-size: 1rem; /* 16px */
     font-weight: 400;
     line-height: 1.5;
-    color: #212529;
-    text-align: left;
+    color: #212529; /* Dark Grey */
+    text-align: left; /* Align the text to the left of the page */
 }
 
-
+/* Controls the text used in the footer */
 .footerText {
-    color: black;
-    text-align: center;
+    color: black; 
+    text-align: center; /* Aligns the text to be in the center of the footer */
 }
 
-.noteCSS {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 80%;
-    line-height: 1.4;
-    font-style: italic;
-    background-color: #616161;
-}
-
-/* Graident for headers */
-/* Shamelessly stolen from https://webplatform.news/issues/2018-11-02 */
-.Gradient {
-    color: orangered; /* fallback */
-}
-
-@supports (background-clip: text) { /* Firefox Support */
-    .Gradient {
-        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ff00ff+0,ff4500+100 */
-        background: rgb(255,0,255); /* Old browsers */
-        background: -moz-linear-gradient(-45deg, rgba(255,0,255,1) 0%, rgba(255,69,0,1) 100%); /* FF3.6-15 */
-        color: transparent;
-        background-clip: text;
-    }
-}
-
-@supports (-webkit-background-clip: text) { /* Chromium Support */
-    .Gradient {
-        background: -webkit-linear-gradient(-45deg, rgba(255,0,255,1) 0%,rgba(255,69,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(135deg, rgba(255,0,255,1) 0%,rgba(255,69,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        color: transparent;
-        -webkit-background-clip: text;
-    }
-}
-
+    /* License (START) */
+/* Controls the styles used for the license */
 .License {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 100% !important;
     line-height: 1.4;
     font-style: italic;
     margin-top: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 1rem; /*16px */
 }
 
 #License {
@@ -208,149 +133,31 @@ body, html {
     line-height: 1.4;
     font-style: italic;
 }
+    /* License (END) */
 
+    /* Text highlighter (START) */
+/* Pads out the content inside the social box so that it fits perfectly */
 .callout-content {
     margin-bottom: 0px;
-    padding: 16px;
-    -ms-grid-columns: 1fr 220px;
-    grid-template-columns: 1fr 220px;
+    padding: 16px; /* 16px */
+    -ms-grid-columns: 1fr 13.75rem; /* 220px */
+    grid-template-columns: 1fr 13.75rem; /* 220px */
     -ms-grid-rows: auto;
     grid-template-rows: auto;
-    border-radius: 8px;
-    background-color: #fff;
+    border-radius: 0.5rem; /* 8px */
+    background-color: white;
 }
 
 .colour-gradient {
     width: 90%;
-    max-width: 1280px;
+    max-width: 80rem; /* 1280px */
     margin-right: auto;
-    margin-bottom: 48px;
+    margin-bottom: 3rem; /* 48px */
     margin-left: auto;
-    padding: 32px;
-    border-radius: 12px;
-    background-image: url("https://assets.website-files.com/600ead1452cf056d0e52dbed/603408f80d379f66929884cf_PurpleBackground%20(1).png");
+    padding: 2rem; /*32px */
+    border-radius: 0.75rem; /* 12px */
+    background-image: url("https://assets.website-files.com/600ead1452cf056d0e52dbed/603408f80d379f66929884cf_PurpleBackground%20(1).png"); /* Need to put this on my own server instead of being a leech */
     background-position: 0px 0px;
     background-size: cover;
 }
-
-div.responsiveText {
-
-}
-
-@media screen and (min-width: 601px) {
-    div.responsiveText {
-        font-size: 6em;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    div.responsiveText {
-        font-size: 1.5em;
-    }
-}
-
-* {
-    box-sizing: border-box;
-}
-
-/* Position the image container (needed to position the left and right arrows) */
-.container {
-    position: relative;
-}
-
-/* Hide the images by default */
-.mySlides {
-    display: none;
-}
-
-/* Add a pointer when hovering over the thumbnail images */
-.cursor {
-    cursor: pointer;
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-    cursor: pointer;
-    position: absolute;
-    top: 40%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    -webkit-user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-    /* On hover, add a black background color with a little bit see-through */
-    .prev:hover,
-    .next:hover {
-        background-color: rgba(0, 0, 0, 0.8);
-    }
-
-/* Number text (1/3 etc) */
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
-
-/* Container for image text */
-.caption-container {
-    text-align: center;
-    background-color: #222;
-    padding: 2px 16px;
-    color: white;
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* Six columns side by side */
-.column {
-    float: left;
-    width: 16.66%;
-}
-
-/* Add a transparency effect for thumnbail images */
-.demo {
-    opacity: 0.6;
-}
-
-    .active,
-    .demo:hover {
-        opacity: 1;
-    }
-
-.commits {
-    font-size: 1.3rem;
-    font-weight: 500;
-}
-
-.flexBox {
-    display: flex; /* or inline-flex */
-}
-
-.iconsSpace {
-    margin-right: 8px;
-}
-
-.code {
-    font-size: 87.5%;
-    color: #e83e8c;
-    word-wrap: break-word;
-}
+/* Text highlighter (END) */

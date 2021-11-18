@@ -8,60 +8,150 @@
     }
 </style> <!-- Makes the footer stay at the bottom of the page when the scroll bar appears -->
 
-<h1 class="heading1">Welcome!</h1>
-<p>This website is a wide variety of everything in my life, ranging from my current projects to my milestones in life.</p>
-<p>Feel free to take a look at everything I do here, and if you wish to contact me my socials are at the bottom of the page.</p>
+<div class="container">
+    <!-- Shortens the social media tag to be shorter than the page -->
+    <h1 class="heading1">Welcome!</h1>
+    <p>This website is a wide variety of everything in my life, ranging from my current projects to my milestones in life.</p>
+    <p>Feel free to take a look at everything I do here, and if you wish to contact me my socials are at the bottom of the page.</p>
+    <p>It's also incredibly early in its development so if please ignore the jank you see, or report it to me <a href="https://github.com/Aluulu/MyWebsite/issues/new">here.</a></p>
+</div>
 
 <!-- Maybe insert the BigSmug emote here hehehehe -->
 <!-- Or maybe a picture of myself since that would fit the theme -->
 
-<div class="container col-xxl-8 px-4">
-    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-        <div class="col-10 col-sm-8 col-lg-6">
-            <img src="~/images/index/GitHub Website Heroes.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy" allign="centre";>
-        </div>
-        <div class="col-lg-6">
-            <h1 class="display-5 fw-bold lh-1 mb-3">My Website</h1>
-            <p>One of the best examples of what I've accomplished is my website. It's built using the ASP.NET Core Web Application template in Visual Studio 2019, and then adapted and transformed into what it is today.</p>
-            <p>This entire website is built completely self-taught, everything you see here I had to learn by myself.</p>
+<div class="px-4 pt-5 my-5 text-center">
+    <h1 class="display-4 fw-bold">My Website</h1>
+    <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">One of the best examples of what I've accomplished is my website. It's built using the ASP.NET Core Web Application template in Visual Studio 2019, and then adapted and transformed into what it is today.</p>
+    </div>
+    <div>
+        <div class="container px-5">
+            <img src="~/images/index/GitHub Website Heroes.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
         </div>
     </div>
 </div>
 
-<div class="container col-xxl-8 px-4">
-    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-        <div class="col-lg-6">
-            <h1 class="display-5 fw-bold lh-1 mb-3">Batch and PowerShell</h1>
-            <p>One of the many different projects I took up was trying to make my life easier through Automation</p>
-            <p>These scripts I wrote help complete tasks automatically and without much problem.</p>
-        </div>
-        <div class="col-10 col-sm-8 col-lg-6">
-            <img src="~/images/index/WinGet Heroes.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy" allign="centre" ;>
+<div class="px-4 pt-5 my-5 text-center">
+    <h1 class="display-4 fw-bold">Custom Scripts</h1>
+    <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">One of the many different projects I took up was trying to make my life easier through Automation. These scripts I wrote help complete tasks automatically and without much problem</p>
+    </div>
+    <div>
+        <div class="container px-5">
+            <img src="~/images/index/WinGet Heroes.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
         </div>
     </div>
 </div>
+
+
+
+<div class="container px-4 py-5" id="custom-cards">
+    <h2 class="pb-2 border-bottom">Looking for somewhere to go? Why not try these?</h2>
+
+    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+        <div class="col">
+            <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style='background-image: url("/images/temp/ProjectsWindowsTerminal.png");'>
+                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                    <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Check out the history of this website</h2>
+                    <ul class="d-flex list-unstyled mt-auto">
+                        <li class="me-auto">
+                            <div class="InvertSvgColour">
+                                <a class="small" asp-area="" asp-page="/What'sNew">
+                                    <img src="~/images/icons/link.svg" alt="Link SVG to the page What'sNew" width="32" height="32">
+                                </a>
+                            </div>
+                        </li>
+                        <li class="d-flex align-items-center me-3">
+                            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill" /></svg>
+                            <small>Earth</small>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3" /></svg>
+                            <small>3d</small>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style='background-image: url("/images/temp/GitHubProjects.png");'>
+                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                    <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Check out my projects!</h2>
+                    <ul class="d-flex list-unstyled mt-auto">
+                        <li class="me-auto">
+                            <div class="InvertSvgColour">
+                                <a href="https://github.com/Aluulu">
+                                <img src="~/images/icons/link.svg" alt="Link SVG to the page What'sNew" width="32" height="32">
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('/images/temp/unsplash-photo-3.jpg');">
+                <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                    <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Check out my social media page!</h2>
+                    <ul class="d-flex list-unstyled mt-auto">
+                        <li class="me-auto">
+                            <div class="InvertSvgColour">
+                                <a class="small" asp-area="" asp-page="/What'sNew">
+                                    <img src="~/images/icons/link.svg" alt="Link SVG to the page What'sNew" width="32" height="32">
+                                </a>
+                            </div>
+                        </li>
+                        <li class="d-flex align-items-center me-3">
+                            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill" /></svg>
+                            <small>California</small>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3" /></svg>
+                            <small>5d</small>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+
+
+
 
 <h2 class="heading2">Socials</h2>
 <p>If you ever want to contact me then my socials are as followed:</p>
 
-<div class="colour-gradient">
-    <div class="callout-content">
-        <div style="text-align:center">
-            <a href="https://www.youtube.com/channel/UCR6F4uDpl-NWs5-GULFKxFg">
-                <img src="~/images/icons/youtube.png" alt="YouTube icon" style="width:64px; height:64px;">
-            </a>
-            <a href="https://steamcommunity.com/profiles/76561198184642273/">
-                <img src="~/images/icons/steam.png" alt="Steam icon" style="width:64px; height:64px;">
-            </a>
-            <a href="https://twitter.com/Alulcard">
-                <img src="~/images/icons/twitter.png" alt="Twitter icon" style="width:64px; height:64px;">
-            </a>
-            <a href="https://www.reddit.com/user/Alulcard/">
-                <img src="~/images/icons/reddit.png" alt="Reddit icon" style="width:64px; height:64px;">
-            </a>
-            <a href="https://github.com/Aluulu">
-                <img src="~/images/icons/github.png" alt="Github icon" style="width:64px; height:64px;">
-            </a>
+<div class="container">
+    <!-- Shortens the social media tag to be shorter than the page -->
+    <div class="colour-gradient">
+        <div class="callout-content">
+            <div style="text-align:center">
+                <a href="https://www.youtube.com/channel/UCR6F4uDpl-NWs5-GULFKxFg">
+                    <img src="~/images/icons/youtube.png" alt="YouTube icon" style="width:64px; height:64px;">
+                </a>
+                <a href="https://steamcommunity.com/profiles/76561198184642273/">
+                    <img src="~/images/icons/steam.png" alt="Steam icon" style="width:64px; height:64px;">
+                </a>
+                <a href="https://twitter.com/Alulcard">
+                    <img src="~/images/icons/twitter.png" alt="Twitter icon" style="width:64px; height:64px;">
+                </a>
+                <a href="https://www.reddit.com/user/Alulcard/">
+                    <img src="~/images/icons/reddit.png" alt="Reddit icon" style="width:64px; height:64px;">
+                </a>
+                <a href="https://github.com/Aluulu">
+                    <img src="~/images/icons/github.png" alt="Github icon" style="width:64px; height:64px;">
+                </a>
+            </div>
         </div>
     </div>
 </div>

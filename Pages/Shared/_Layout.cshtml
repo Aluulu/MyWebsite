@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,69 +8,78 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="shortcut icon" type="image/ico" href="~/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arapey&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-#7952b3 border-bottom box-shadow mb-3 bd-navbar">
-            <div class="container">
-                <a style="font-family: Inter, sans-serif; font-size: 1em; line-height: 1.5em; font-weight: 700; letter-spacing: 0.013em; color: white;" asp-area="" asp-page="/Index">Callum's Website</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+    <div class="container"> <!-- Limits the page width -->
+        <header>
+            <nav class="navbar navbar-expand-xl container-fluid">
+
+                <a class="navbar-brand text-dark" asp-page="/index">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-heart" viewBox="0 0 16 16">
+                        <path
+                            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                    </svg> Callum
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarButton"
+                    aria-controls="navbarButton" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon navbar-light"><svg width="30px" height="30px" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><title>70 Basic icons by Xicons.co</title><path d="M41,14H7a2,2,0,0,1,0-4H41A2,2,0,0,1,41,14Z" fill="#6f7380"/><path d="M41,26H7a2,2,0,0,1,0-4H41A2,2,0,0,1,41,26Z" fill="#6f7380"/><path d="M41,38H7a2,2,0,0,1,0-4H41A2,2,0,0,1,41,38Z" fill="#6f7380"/></svg>
+                    </span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-
+                <div id="navbarButton" class="navbar-collapse collapse">
+                    <a class="navbar-toggle order-4 popup-inline"
+                        href="#navbar-mobile-style-1"><span></span><span></span><span></span></a>
+                    <ul class="nav navbar-nav order-2 ms-auto nav-no-opacity navbar-right">
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-page="/AboutMe">About Me</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/AboutMe">About Me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-page="/Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/TEMP">Temp</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-page="/Pictures">Pictures</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Documents">Documents</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-page="/Documents">Documents</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Test">Test</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-page="/Test">Test</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-page="/What'sNew">What's new</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/What'sNew">What's new</a>
                         </li>
                     </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
+                </div> <!-- Div for button?? -->
+            </nav>
+        </header>
+
         <main role="main" class="pb-3">
-            <div class="textStyleCSS">
-                <!-- Applys the css styles for all text in the body -->
-                @RenderBody() <!-- THIS IS WHERE THE OTHER PAGES GET RENDERED -->
-            </div>
+            <!-- Applys the css styles for all text in the body -->
+            @RenderBody()
+            <!-- THIS IS WHERE THE OTHER PAGES GET RENDERED -->
         </main>
+
+        <footer class="mt-auto text-center border-top">
+            <p>2021 - MyWebsite - <a asp-area="" asp-page="/Privacy">Privacy</a> Last updated 2021/05/07</p>
+        </footer>
+
+
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+
+        @await RenderSectionAsync("Scripts", required: false)
     </div>
-
-    <footer class="border-top footer text-muted">
-        <!-- Text in the footer -->
-        <div class="container">
-            <div class="footerText">
-                &copy; 2021 - MyWebsite - <a asp-area="" asp-page="/Privacy">Privacy</a> Last updated 2021/05/07
-            </div>
-        </div>
-    </footer>
-
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-
-    @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 </html>

@@ -8,20 +8,30 @@
 
 <h1 class="heading1">@ViewData["Title"]</h1>
 
-<p>Feel free to use this website as you wish, it follows the MIT lisense meaning that this webpage's source code is open and free to use for your own projects.</p>
-<p>If you haven't already, <a href="https://github.com/Aluulu/MyWebsite">click the github link here.</a> It will bring you to this page's GitHub repository.</p>
-<p>I am open to help and suggestions, I am by no means a good web dev so please teach me <i>*insert a heart emote here or something. I dunno how web dev hearts work smh*</i></p>
+<p class="lead">Feel free to use this website as you wish, it follows the MIT lisense meaning that this webpage's source code is open and free to use for your own projects.</p>
+<p class="lead">If you haven't already, <a href="https://github.com/Aluulu/MyWebsite">click the github link here.</a> It will bring you to this page's GitHub repository.</p>
+<p class="lead">I am open to help and suggestions, I am by no means a good web dev so please teach me     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+    </svg>
+<p class="lead">Oh wait, you came here expecting some whitty rebuttal or one-liner since that's what this entire webpage has been about, didn't you? Well I'm sorry to say but that's not happening.
+    This website doesn't have enough pazaz to warrent a whole privacy page. I mean what the hell am I supposed to be chucking in there exactly? "Oh thank you for coming onto my page I really appreciate that, but 
+    there are a few rules you must be aware off. This is how I collect your data blah blah blah" Nahh that's not how it works, this website doesn't even use cookies..... wait does it? I don't know how to check.. 
+    I'm writing this having a panic attack oh God how do I know?! Well either way, you've been reading me ramble on for like 2 minutes straight and you're still here, that's impressive.
+    Or maybe that's concerning? Who stays on a privacy page for this long, is this what you get up to in your spare time? That's kinda weird, and I thought I was weird. I'll be honest, I've been stalling, here's the privacy statement since you need it so much:
+</p>    
 
-<div class="colour-gradient">
-    <div class="callout-content">
-        <div id="License">
-            <p class="License">
+
+
+
+<button class="accordion">MIT License</button>
+<div class="panel">
+  <p class="fw-bolder lh-sm" style="padding-left: 20px;padding-right: 20px;">
                 MIT License
             </p>
-            <p class="License">
+            <p class="fw-bolder lh-sm" style="padding-left: 20px;padding-right: 20px;">
                 Copyright (c) 2021 Callum Wellard
             </p>
-            <p class="License">
+            <p class="fw-bolder lh-sm" style="padding-left: 20px;padding-right: 20px;">
                 Permission is hereby granted, free of charge, to any person obtaining a copy
                 of this software and associated documentation files (the "Software"), to deal
                 in the Software without restriction, including without limitation the rights
@@ -29,11 +39,11 @@
                 copies of the Software, and to permit persons to whom the Software is
                 furnished to do so, subject to the following conditions:
             </p>
-            <p class="License">
+            <p class="fw-bolder lh-sm" style="padding-left: 20px;padding-right: 20px;">
                 The above copyright notice and this permission notice shall be included in all
                 copies or substantial portions of the Software.
             </p>
-            <p class="License">
+            <p class="fw-bolder lh-sm" style="padding-left: 20px;padding-right: 20px;">
                 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
                 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
                 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -42,11 +52,35 @@
                 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
                 SOFTWARE.
             </p>
-        </div>
-    </div>
 </div>
 
+    
+ 
 
-<p>Want to learn more about MIT Licenses? Check out <a href="https://choosealicense.com/licenses/mit/">ChooseALicense.com.</a></p>
 
-<p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+            
+
+<script> 
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("active");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+} 
+
+</script>
+
+<p class="lead">Want to learn more about MIT Licenses? Check out <a href="https://choosealicense.com/licenses/mit/">ChooseALicense.com.</a></p>

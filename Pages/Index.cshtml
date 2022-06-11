@@ -1,158 +1,160 @@
 ﻿@page
-@model MyWebsite.Pages.AboutMeModel
-@{ ViewData["Title"] = "Welcome!"; }
+@model IndexModel
+@{
+  ViewData["Title"] = "Home page";
+}
+@{
+  Layout = null;
+  <!-- Do not use the universal reference page. This removes padding and the nav bar -->
+}
 
-<style>
-    .footer {
-        position: relative;
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.98.0">
+  <title>Cover Template · Bootstrap v5.2</title>
+
+  <link rel="stylesheet" href="~/css/site.css" />
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/cover/">
+
+
+
+
+
+  <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
     }
-</style> <!-- Makes the footer stay at the bottom of the page when the scroll bar appears -->
 
-<div class="container">
-    <!-- Shortens the social media tag to be shorter than the page -->
-    <h1 class="heading1">Welcome!</h1>
-    <p>This website is a wide variety of everything in my life, ranging from my current projects to my milestones in life.</p>
-    <p>Feel free to take a look at everything I do here, and if you wish to contact me my socials are at the bottom of the page.</p>
-    <p>It's also incredibly early in its development so if please ignore the jank you see, or report it to me <a href="https://github.com/Aluulu/MyWebsite/issues/new">here.</a></p>
-</div>
+    @@media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
 
-<!-- Maybe insert the BigSmug emote here hehehehe -->
-<!-- Or maybe a picture of myself since that would fit the theme -->
+    .b-example-divider {
+      height: 3rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
 
-<div class="px-4 pt-5 my-5 text-center">
-    <h1 class="display-4 fw-bold">My Website</h1>
-    <div class="col-lg-6 mx-auto">
-        <p class="lead mb-4">One of the best examples of what I've accomplished is my website. It's built using the ASP.NET Core Web Application template in Visual Studio 2019, and then adapted and transformed into what it is today.</p>
-    </div>
-    <div>
-        <div class="container px-5">
-            <img src="~/images/index/GitHub Website Heroes.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
-        </div>
-    </div>
-</div>
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
 
-<div class="px-4 pt-5 my-5 text-center">
-    <h1 class="display-4 fw-bold">Custom Scripts</h1>
-    <div class="col-lg-6 mx-auto">
-        <p class="lead mb-4">One of the many different projects I took up was trying to make my life easier through Automation. These scripts I wrote help complete tasks automatically and without much problem</p>
-    </div>
-    <div>
-        <div class="container px-5">
-            <img src="~/images/index/WinGet Heroes.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
-        </div>
-    </div>
-</div>
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
 
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
 
-
-<div class="container px-4 py-5" id="custom-cards">
-    <h2 class="pb-2 border-bottom">Looking for somewhere to go? Why not try these?</h2>
-
-    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-        <div class="col">
-            <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style='background-image: url("/images/temp/ProjectsWindowsTerminal.png");'>
-                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                    <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Check out the history of this website</h2>
-                    <ul class="d-flex list-unstyled mt-auto">
-                        <li class="me-auto">
-                            <div class="InvertSvgColour">
-                                <a class="small" asp-area="" asp-page="/What'sNew">
-                                    <img src="~/images/icons/link.svg" alt="Link SVG to the page What'sNew" width="32" height="32">
-                                </a>
-                            </div>
-                        </li>
-                        <li class="d-flex align-items-center me-3">
-                            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill" /></svg>
-                            <small>Earth</small>
-                        </li>
-                        <li class="d-flex align-items-center">
-                            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3" /></svg>
-                            <small>3d</small>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style='background-image: url("/images/temp/GitHubProjects.png");'>
-                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                    <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Check out my projects!</h2>
-                    <ul class="d-flex list-unstyled mt-auto">
-                        <li class="me-auto">
-                            <div class="InvertSvgColour">
-                                <a href="https://github.com/Aluulu">
-                                <img src="~/images/icons/link.svg" alt="Link SVG to the page What'sNew" width="32" height="32">
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('/images/temp/unsplash-photo-3.jpg');">
-                <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                    <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Check out my social media page!</h2>
-                    <ul class="d-flex list-unstyled mt-auto">
-                        <li class="me-auto">
-                            <div class="InvertSvgColour">
-                                <a class="small" asp-area="" asp-page="/What'sNew">
-                                    <img src="~/images/icons/link.svg" alt="Link SVG to the page What'sNew" width="32" height="32">
-                                </a>
-                            </div>
-                        </li>
-                        <li class="d-flex align-items-center me-3">
-                            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill" /></svg>
-                            <small>California</small>
-                        </li>
-                        <li class="d-flex align-items-center">
-                            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3" /></svg>
-                            <small>5d</small>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+  </style>
 
 
 
+</head>
+
+<body class="d-flex h-100 text-center text-white bg-dark">
+
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="mb-auto">
+      <div>
+        <nav class="navbar navbar-expand-md container-fluid">
+
+          <a class="navbar-brand text-light" asp-page="/index">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart"
+              viewBox="0 0 16 16">
+              <path
+                d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+            </svg> Callum
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarButton"
+            aria-controls="navbarButton" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon navbar-light"><svg width="30px" height="30px" viewBox="0 0 30 30"
+                xmlns="http://www.w3.org/2000/svg">
+                <title>70 Basic icons by Xicons.co</title>
+                <path d="M41,14H7a2,2,0,0,1,0-4H41A2,2,0,0,1,41,14Z" fill="#6f7380" />
+                <path d="M41,26H7a2,2,0,0,1,0-4H41A2,2,0,0,1,41,26Z" fill="#6f7380" />
+                <path d="M41,38H7a2,2,0,0,1,0-4H41A2,2,0,0,1,41,38Z" fill="#6f7380" />
+              </svg>
+            </span>
+          </button>
+          <div id="navbarButton" class="navbar-collapse collapse">
+            <a class="navbar-toggle order-4 popup-inline"
+              href="#navbar-mobile-style-1"><span></span><span></span><span></span></a>
+            <ul class="nav navbar-nav order-2 ms-auto nav-no-opacity navbar-right">
+              <li class="nav-item">
+                <a class="nav-link text-light" asp-area="" asp-page="/AboutMe">About Me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" asp-area="" asp-page="/Privacy">Privacy</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link text-light" asp-area="" asp-page="/TEMP">Temp</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link text-light" asp-area="" asp-page="/Documents">Documents</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link text-light" asp-area="" asp-page="/Test">Test</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link text-light" asp-area="" asp-page="/What'sNew">What's new</a>
+              </li>
+            </ul>
+          </div> <!-- Div for button?? -->
+        </nav>
+      </div>
+    </header>
+
+    <main class="px-3">
+      <h1>heya, fancy seeing you here</h1>
+      <p class="lead">So you ended up here either by choice or by luck. In either case, welcome! Here you can learn
+        all about me, like a weird museum of sorts. The more I say, the less I like it. Let's move on shall we?</p>
+      <p class="lead">
+        <a asp-area="" asp-page="/AboutMe" class="btn btn-lg btn-secondary fw-bold">sure thing, lets go</a>
+      </p>
+    </main>
+
+    <footer class="mt-auto">
+      <p>2021 - MyWebsite - <a asp-area="" asp-page="/Privacy">Privacy</a> Last updated 2021/05/07</p>
+    </footer>
+  </div>
 
 
 
+</body>
 
-
-
-<h2 class="heading2">Socials</h2>
-<p>If you ever want to contact me then my socials are as followed:</p>
-
-<div class="container">
-    <!-- Shortens the social media tag to be shorter than the page -->
-    <div class="colour-gradient">
-        <div class="callout-content">
-            <div style="text-align:center">
-                <a href="https://www.youtube.com/channel/UCR6F4uDpl-NWs5-GULFKxFg">
-                    <img src="~/images/icons/youtube.png" alt="YouTube icon" style="width:64px; height:64px;">
-                </a>
-                <a href="https://steamcommunity.com/profiles/76561198184642273/">
-                    <img src="~/images/icons/steam.png" alt="Steam icon" style="width:64px; height:64px;">
-                </a>
-                <a href="https://twitter.com/Alulcard">
-                    <img src="~/images/icons/twitter.png" alt="Twitter icon" style="width:64px; height:64px;">
-                </a>
-                <a href="https://www.reddit.com/user/Alulcard/">
-                    <img src="~/images/icons/reddit.png" alt="Reddit icon" style="width:64px; height:64px;">
-                </a>
-                <a href="https://github.com/Aluulu">
-                    <img src="~/images/icons/github.png" alt="Github icon" style="width:64px; height:64px;">
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- https://www.flaticon.com/packs/social-media-51 -->
+</html>

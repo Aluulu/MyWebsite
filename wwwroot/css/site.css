@@ -1,312 +1,82 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
+﻿/*
+ * Globals
+ */
 
-    /* navbar (START) */
-.bd-navbar {
-    background-color: #563d7c;
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
 }
 
-.nav-item {
-    margin-bottom: 0px;
-    font-family: Inter, sans-serif;
-    color: #7952b3 !important;
-    font-size: 1em;
-    line-height: 1.5em;
-    font-weight: 700;
-    letter-spacing: 0.013em;
-}
-    /* navbar (END) */
 
-/* heading1 css styles */
-.heading1 {
-    color: #303030; /* Black */
-    font-weight: 500;
-    font-size: 2.5rem; /* 40px */
-    line-height: 1.2;
-}
-
-/* heading2 css styles */
-.heading2 {
-    margin-bottom: .5rem; /* 8px */
-    font-weight: 500;
-    line-height: 1.2;
-}
-
-/* Controls Hyperlink colour (Default blue) */
-a {
-
-}
-
-    /* Mouse over link  */
-    a:hover {
-        color: #7952b3; /* Dark purple */
-    }
+/*
+ * Base structure
+ */
 
 body {
-    background-color: white; /*  Colour of background in body */
-    color: black; /* Colour of text in body */
-    /* https://uxdesign.cc/dark-mode-ui-design-the-definitive-guide-part-1-color-53dcfaea5129 */
-
-    text-align: justify;
-    margin-bottom: 3.75em; /* 60px */
+  /* Body stuff goes here */
 }
 
-.footer {
-    position: absolute; /* Keeps the footer at the bottom of the page */
-    bottom: 0;
-    width: 100%;
-    white-space: nowrap;
-    line-height: 3.75em; /* Vertically center the text there */ /* 60px */
+.cover-container {
+  max-width: 42em;
 }
 
-/* Used to invert the social media icons from black to white. */
-.InvertSvgColour {
-    filter: invert(1); /* 100% invert, meaning the colours are fully inverted */
+
+/*
+ * Header
+ */
+
+.nav-masthead .nav-link {
+  color: rgba(255, 255, 255, .5);
+  border-bottom: .25rem solid transparent;
 }
 
-/* Edits the main body */
-body, html {
-    height: 100%;
-    margin: 0;
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: rgba(255, 255, 255, .25);
 }
 
-    /* Accordion (START) */
-/* Style the buttons that are used to open and close the accordion panel */
-.accordion {
-    background-color: #777; /* Grey */
-    color: white; /* Colour of text on top of accordion (not dropdown text) */
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.nav-masthead .active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+
+
+
+ /* Style the buttons that are used to open and close the accordion panel */
+ .accordion {
+    background-color: #eee;
+    color: #444;
     cursor: pointer;
-    padding: 1.125rem; /* 18px */
+    padding: 18px;
     width: 100%;
     text-align: left;
     border: none;
     outline: none;
     transition: 0.4s;
-}
-
-    /* Add a colour to the button when clicked on, and when you hover the mouse over the button */
-    .active, .accordion:hover {
-        background-color: #555;
-    }
-
-/* Style the accordion panel. Note: hidden by default */
-.panel {
-    padding: 0 1.125rem; /* 18px */
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .accordion:hover {
+    background-color: #ccc;
+  }
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+    padding: 0 18px;
     background-color: white;
-    max-height: 0;
+    display: none;
     overflow: hidden;
-    transition: max-height 0.2s ease-out;
-    text-align: center;
-}
-    /* Accordion (END) */
+  } 
 
-/* Apply these styles to the text, excludes the header and footer */
-.textStyleCSS {
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    font-size: 1rem; /* 16px */
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529; /* Dark Grey */
-    text-align: left; /* Align the text to the left of the page */
-}
-
-/* Controls the text used in the footer */
-.footerText {
-    color: black; 
-    text-align: center; /* Aligns the text to be in the center of the footer */
-}
-
-    /* License (START) */
-/* Controls the styles used for the license */
-.License {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 100% !important;
-    line-height: 1.4;
-    font-style: italic;
-    margin-top: 0;
-    margin-bottom: 1rem; /*16px */
-}
-
-#License {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 80%;
-    line-height: 1.4;
-    font-style: italic;
-}
-    /* License (END) */
-
-    /* Text highlighter (START) */
-/* Pads out the content inside the social box so that it fits perfectly */
-.callout-content {
-    margin-bottom: 0px;
-    padding: 16px; /* 16px */
-    -ms-grid-columns: 1fr 13.75rem; /* 220px */
-    grid-template-columns: 1fr 13.75rem; /* 220px */
-    -ms-grid-rows: auto;
-    grid-template-rows: auto;
-    border-radius: 0.5rem; /* 8px */
-    background-color: white;
-}
-
-.colour-gradient {
-    width: 90%;
-    max-width: 80rem; /* 1280px */
-    margin-right: auto;
-    margin-bottom: 3rem; /* 48px */
-    margin-left: auto;
-    padding: 2rem; /*32px */
-    border-radius: 0.75rem; /* 12px */
-    background-image: url("https://assets.website-files.com/600ead1452cf056d0e52dbed/603408f80d379f66929884cf_PurpleBackground%20(1).png"); /* Need to put this on my own server instead of being a leech */
-    background-position: 0px 0px;
-    background-size: cover;
-}
-/* Text highlighter (END) */
-
-
-
-
-
-
-
-
-.b-example-divider {
-    height: 3rem;
-    background-color: rgba(0, 0, 0, .1);
-    border: solid rgba(0, 0, 0, .15);
-    border-width: 1px 0;
-    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-}
-
-.bi {
-    vertical-align: -.125em;
-    fill: currentColor;
-}
-
-.feature-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 4rem;
-    height: 4rem;
-    margin-bottom: 1rem;
-    font-size: 2rem;
-    color: #fff;
-    border-radius: .75rem;
-}
-
-.icon-link {
-    display: inline-flex;
-    align-items: center;
-}
-
-.icon-link > .bi {
-    margin-top: .125rem;
-    margin-left: .125rem;
-    transition: transform .25s ease-in-out;
-    fill: currentColor;
-}
-
-.icon-link:hover > .bi {
-    transform: translate(.25rem);
-}
-
-.icon-square {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 3rem;
-    height: 3rem;
-    font-size: 1.5rem;
-    border-radius: .75rem;
-}
-
-.rounded-4 {
-    border-radius: .5rem;
-}
-
-.rounded-5 {
-    border-radius: 1rem;
-}
-
-.text-shadow-1 {
-    text-shadow: 0 .125rem .25rem rgba(0, 0, 0, .25);
-}
-
-.text-shadow-2 {
-    text-shadow: 0 .25rem .5rem rgba(0, 0, 0, .25);
-}
-
-.text-shadow-3 {
-    text-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .25);
-}
-
-.card-cover {
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-}
-
-.bd-placeholder-img {
-    font-size: 1.125rem;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-}
-
-
-
-
-
-
-
-
-
-
-
-.order-card {
-    color: #fff;
-}
-
-.bg-c-blue {
-    background: linear-gradient(45deg,#4099ff,#73b4ff);
-}
-
-.bg-c-green {
-    background: linear-gradient(45deg,#2ed8b6,#59e0c5);
-}
-
-.bg-c-yellow {
-    background: linear-gradient(45deg,#FFB64D,#ffcb80);
-}
-
-.bg-c-pink {
-    background: linear-gradient(45deg,#FF5370,#ff869a);
-}
-
-
-.GitHubCard {
-    border-radius: 5px;
-    -webkit-box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
-    box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
-    border: none;
-    margin-bottom: 30px;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-}
-
-.GitHubCard .card-block {
-    padding: 25px;
-}
-
-.order-card i {
-    font-size: 26px;
-}
-
-.f-left {
-    float: left;
-}
-
-.f-right {
-    float: right;
+  .InvertSvgColour {
+    filter: invert(1); /* 100% invert, meaning the colours are fully inverted */
 }

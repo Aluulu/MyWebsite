@@ -1,7 +1,7 @@
 ﻿@page
 @model MyWebsite.Pages.What_sNewModel
 @{
-    ViewData["Title"] = "Weather";
+ViewData["Title"] = "Weather";
 }
 
 <style>
@@ -10,28 +10,87 @@
     }
 </style> <!-- Makes the footer stay at the bottom of the page when the scroll bar appears -->
 
-    <h1 id="WeatherLocationHeading">Weather in a place of your choice!</h1>
-    <label class="lead">Choose a location for Weather:</label>
-    <br>
-    <input type="text" id="WeatherLocation">
+<h1 id="WeatherLocationHeading">Weather in a place of your choice!</h1>
+<label class="lead">Choose a location for Weather:</label>
+<br>
+<input type="text" id="WeatherLocation" class="btn btn-lg btn-secondary fw-bold text-white" placeholder="Enter your location here">
 
-    <button type="button" onclick="CheckWeatherFromAPI()">Check the Weather!!</button>
+<button type="button" onclick="CheckWeatherFromAPI()" class="btn btn-lg btn-secondary fw-bold text-white">Check the Weather</button>
+<button type="button" onclick="GetUsersGPSLocation()" class="btn btn-lg btn-secondary fw-bold text-white">Check using your current location</button>
 
-
+<br>
+<div>
+    <img id="WeatherIcon" src="" alt="" style="Float: right">
     <p id="WeatherDescription" class="lead"></p>
     <p id="WeatherFeelsLike" class="lead"></p>
     <p id="WeatherHumidity" class="lead"></p>
     <p id="WeatherWindSpeed" class="lead"></p>
-    <img id="WeatherIcon" src="" alt="" width="200" height="200">
+</div>
 
-    <script>
+<script>
 
+    function CheckWeatherFromAPI() {
         // Created it as a function so that it can be called from the button
-        function CheckWeatherFromAPI() {
 
-            // Fetch weather data from API
-            var WeatherLocation_ChoosenByUser = document.getElementById("WeatherLocation").value;
-            fetch('https://api.openweathermap.org/data/2.5/weather?q=' + WeatherLocation_ChoosenByUser + '&appid=833d0f10a491cdf1287668b859b66005&units=metric')
+        if (document.getElementById("WeatherLocation").value == "") {
+            alert("Please enter a value into the text box");
+            return;
+        }
+
+        // Fetch weather data from API
+        var WeatherLocation_ChoosenByUser = document.getElementById("WeatherLocation").value;
+        fetch('https://api.openweathermap.org/data/2.5/weather?q=' + WeatherLocation_ChoosenByUser + '&appid=833d0f10a491cdf1287668b859b66005&units=metric')
+
+            // Convert response string to json object
+            .then(response => response.json())
+
+            // response.json is the stored data from the GET API call
+            .then(response => {
+
+                // Display whole API response in browser console (take a look at it!)
+                console.log(response);
+
+                // Change the name of the location in the heading
+                document.getElementById("WeatherLocationHeading").innerHTML = "You have chosen to check the weather in: " + response.name;
+
+                // Provide the description for the weather 
+                document.getElementById("WeatherDescription").innerHTML = response.name + " currently is " + response.weather[0].description;
+
+                // Grabs the Feels Like data from the API Object
+                document.getElementById("WeatherFeelsLike").innerHTML = "The weather feels like: " + response.main.feels_like + "°C";
+
+                // Grabs the Humidity data from the API Object
+                document.getElementById("WeatherHumidity").innerHTML = "Humidity: " + response.main.humidity + "%";
+
+                // Grabs the Wind data from the API Object
+                document.getElementById("WeatherWindSpeed").innerHTML = "Wind speed " + response.wind.speed + "mph";
+
+                // Changes the source of the image labelled WeatherIcon to the location of the icons by combining the url and the ID together
+                //var WeatherIconLocation =
+                document.getElementById("WeatherIcon").src = "http://openweathermap.org/img/wn/" + response.weather[0].icon + "@@2x.png";
+
+                // Sets the width and height to be an ideal setting
+                document.getElementById("WeatherIcon").width = "200"
+                document.getElementById("WeatherIcon").height = "200"
+            })
+            .catch(err => {
+
+                // Display errors in console
+                console.log(err);
+                // document.getElementById("WeatherDescription").innerHTML = response.name + console.log(err)
+            });
+
+
+    }
+
+    function GetUsersGPSLocation() {
+        
+        // Clears the input box for visual 
+        document.getElementById("WeatherLocation").value = "";
+
+        // Code copied from https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API
+        function success(position) {
+            fetch('https://api.openweathermap.org/data/2.5/weather?lat=' + position.coords.latitude + '&lon=' + position.coords.longitude + '&appid=833d0f10a491cdf1287668b859b66005&units=metric')
 
                 // Convert response string to json object
                 .then(response => response.json())
@@ -59,10 +118,11 @@
 
                     // Changes the source of the image labelled WeatherIcon to the location of the icons by combining the url and the ID together
                     //var WeatherIconLocation =
-                        document.getElementById("WeatherIcon").src = "http://openweathermap.org/img/wn/" + response.weather[0].icon + "@@2x.png";
+                    document.getElementById("WeatherIcon").src = "http://openweathermap.org/img/wn/" + response.weather[0].icon + "@@2x.png";
 
-
-
+                    // Sets the width and height to be an ideal setting
+                    document.getElementById("WeatherIcon").width = "200"
+                    document.getElementById("WeatherIcon").height = "200"
                 })
                 .catch(err => {
 
@@ -70,6 +130,26 @@
                     console.log(err);
                     // document.getElementById("WeatherDescription").innerHTML = response.name + console.log(err)
                 });
+        } // End of function Success
+
+        // if the Geolocation is unable to retrieve the location then it will display this error message
+        function error() {
+            alert('Unable to retrieve your location');
         }
 
-    </script>
+        // If the browser doesn't support Geolocation then it will display this message
+        if (!navigator.geolocation) {
+            alert('Geolocation is not supported by your browser');
+        } else {
+            navigator.geolocation.getCurrentPosition(success, error);
+        }
+
+    }
+    // } // End of GetUsersGPSLocation function 
+
+    function GetLocationFromUsersInput() {
+
+        CheckWeatherFromAPI();
+    }
+
+</script>
